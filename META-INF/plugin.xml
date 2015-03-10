@@ -1,0 +1,48 @@
+<idea-plugin version="2">
+    <id>de.uni.bremen.monty.mode</id>
+    <name>Mode</name>
+    <version>1.0</version>
+    <vendor email="hewie@tzi.de" url="http://www.yourcompany.com">Universität Bremen</vendor>
+
+    <description><![CDATA[
+      MOnty Develeopement Environment
+      Language support for Monty
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="131"/>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="de.uni.bremen.monty.mode.MontyFileTypeFactory"/>
+        <lang.syntaxHighlighterFactory implementationClass="de.uni.bremen.monty.mode.MontySyntaxHighlighterFactory"
+                                       key="monty"/>
+        <colorSettingsPage implementation="de.uni.bremen.monty.mode.MontyColorSettingsPage"/>
+        <!--<fileType.fileViewProviderFactory implementationClass="de.uni.bremen.monty.mode.MontyFileViewProviderFactory" filetype="Monty"/>-->
+        <lang.parserDefinition implementationClass="de.uni.bremen.monty.mode.MontyParserDefinition" language="monty"/>
+        <!--<gotoClassContributor implementation="de.uni.bremen.monty.mode.MontyGotoClassContributor"/>-->
+    </extensions>
+
+    <application-components>
+
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
